@@ -158,7 +158,7 @@ func ProgramStdin(exercise, input string, args ...string) {
 		return fmt.Sprintf(s+"go run . %s\n%s$", strings.Join(quotedArgs, " "), out)
 	}
 	student, studentOK := run(path.Join("student", exercise))
-	solution, solutionOK := run(path.Join("github.com/01-edu/go-tests/solutions", exercise))
+	solution, solutionOK := run(path.Join("github.com/01-edu/go-tests-training/solutions", exercise))
 	if solutionOK {
 		if !studentOK {
 			Fatalln("Your program fails (non-zero exit status) when it should not :\n" +
